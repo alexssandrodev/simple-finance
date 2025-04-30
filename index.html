@@ -1,22 +1,55 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/style.css" >
-    <title>Simple Finance</title>
-  </head>
-  <body>
-    <header>
-      <h1>SimpleFinance</h1>
-      <nav>
-        <a href="#" id='new'>Criar lançamento</a>
-      </nav>
-    </header>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="src/style.css">
+  <title>Simple Finance</title>
+</head>
+
+<body>
+  <header>
+    <h1>SimpleFinance</h1>
+    <nav>
+      <a href="#" id='new'>Criar lançamento</a>
+    </nav>
+  </header>
+  <main class='container'>
+    <section class='modal-container'>
+      <div class='modal'>
+        <div class='icon-close'>
+          <svg id='close' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-x-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+          </svg>
+        </div>
+        <h2>Criar lançamento</h2>
+        <form class='form-launch'>
+          <label>Tipo do lançamento</label>
+          <select>
+            <option value='pay'>A pagar</option>
+            <option value='receive'>A receber</option>
+          </select>
+          <label>Titulo</label>
+          <input type='text' id='title' placeholder='Titulo do lançamento' />
+          <label>Valor</label>
+          <input type='number' id='value' placeholder='Valor do lançamento' />
+          <label>Data</label>
+          <input type='date' id='date' placeholder='Data do lançamento' />
+          <input type='submit' id='btn-save' value='Salvar' />
+        </form>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
