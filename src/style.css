@@ -143,6 +143,11 @@
     padding: 1rem 0;
   }
 
+  .table-launchs tbody .btn-trash {
+    color: red;
+    cursor: pointer;
+  }
+
 
 
 
